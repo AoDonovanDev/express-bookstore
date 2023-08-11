@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonschema": "^1.4.1",
+    "pg": "^8.11.2",
+    "supertest": "^6.3.3"
+  }
+}
