@@ -37,7 +37,7 @@ router.post("/", validate, async function (req, res, next) {
   if(!result.valid) next(new ExpressError(result.errors, 400))
   try {
     const book = await Book.create(req.body);
-    return res.status(201).json({ book });
+    return res.status(201).send({book});
   } catch (err) {
     return next(err);
   }

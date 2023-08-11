@@ -8,7 +8,7 @@ function validate(req, res, next){
 
   if(!result.valid){
     const errors = result.errors.map(e => e.stack)
-    next(errors)
+    next(new ExpressError(errors, 400))
   } 
 
   next()
